@@ -81,9 +81,11 @@ fun main() {
     //TODO: Servir café en las tazas... siempre que haya café en la cafetera y en el orden cafetera1, cafetera2 y cafetera3.
 
     for (taza in listaTazas){
-        if(cafetera1.cantidad > 0) {cafetera1.servirTaza(taza)}
-        else if(cafetera2.cantidad > 0) {cafetera2.servirTaza(taza)}
-        else if(cafetera3.cantidad > 0){ cafetera3.servirTaza(taza)}
+        while (taza.cantidad != taza.capacidad) {
+            if (cafetera1.cantidad > 0) {cafetera1.servirTaza(taza)}
+            else if (cafetera2.cantidad > 0) {cafetera2.servirTaza(taza)}
+            else if (cafetera3.cantidad > 0) {cafetera3.servirTaza(taza)}
+        }
     }
 
     println("**********************************************")
